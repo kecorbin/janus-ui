@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="header">
+    <h4 class="title">{{title}}</h4>
+  </div>
+  <div class="content">
+    <div class="table-responsive table-full-width">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each jobs as |job|}}
+           {{#link-to "jobs.show" job tagName="tr"}}
+              <td>{{job.id}}</td>
+              <td>{{job.name}}</td>
+              <td>{{job.type}}</td>
+              <td>{{job.image}}</td>
+            {{/link-to}}
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

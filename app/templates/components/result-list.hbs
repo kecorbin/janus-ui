@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="header">
+    <h4 class="title">{{title}}</h4>
+  </div>
+  <div class="content">
+    <div class="table-responsive table-full-width">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Result</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {{#each results as |result|}}
+           {{#link-to "results.show" result tagName="tr"}}
+              <td>{{result.id}}</td>
+              <td>{{result.result}}</td>
+            {{/link-to}}
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
