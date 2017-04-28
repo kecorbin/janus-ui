@@ -8,5 +8,7 @@ export default DS.Model.extend({
   environment: DS.attr(),
   enabled: DS.attr(),
   interval: DS.attr(),
-  queue: DS.attr()
+  queue: DS.attr(),
+
+  results: DS.hasMany('result')
 });

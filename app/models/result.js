@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  jobId: DS.attr(),
+  jobId: DS.belongsTo('job'),
   result: DS.attr(),
   json: DS.attr(),
   pluginHTMLResponse: DS.attr(),
