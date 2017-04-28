@@ -29,7 +29,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.apiHost = 'http://localhost:8000'
+    ENV.apiHost = 'http://127.0.0.1:8000'
   }
 
   if (environment === 'test') {
@@ -41,6 +41,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+    ENV.apiHost = 'http://collins.interthings.io:8000'
   }
 
   if (environment === 'production') {
