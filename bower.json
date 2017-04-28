@@ -1,6 +1,7 @@
 {
   "name": "collins-ui",
   "dependencies": {
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7"
   }
 }
