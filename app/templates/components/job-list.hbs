@@ -9,6 +9,7 @@
           <tr>
             <th>ID</th>
             <th>Status</th>
+            <th>Site</th>
             <th>Last Result</th>
             <th>Name</th>
             <th>Type</th>
@@ -22,6 +23,7 @@
               <td>
                 {{job-active-toggle job=job}}
               </td>
+              <td>{{job.queue}}</td>
               <td>
                 {{job-result-icon job=job}}
               </td>
