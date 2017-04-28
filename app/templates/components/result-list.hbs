@@ -9,7 +9,7 @@
           <tr>
             <th>ID</th>
             <th>Result</th>
-
+            <th>Created</th>
           </tr>
         </thead>
         <tbody>
@@ -17,6 +17,7 @@
            {{#link-to "results.show" result tagName="tr"}}
               <td>{{result.id}}</td>
               <td>{{result.result}}</td>
+              <td>{{result.created}}</td>
             {{/link-to}}
           {{/each}}
         </tbody>

@@ -5,5 +5,6 @@ export default DS.Model.extend({
   result: DS.attr(),
   json: DS.attr(),
   pluginHTMLResponse: DS.attr(),
-  pluginRawResponse: DS.attr()
+  pluginRawResponse: DS.attr(),
+  created: DS.attr()
 });
