@@ -1,3 +1,13 @@
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var a = [];
+for(var i=0; i<100; i++){
+  a.push(i);
+}
 
 var job2 = {
   "id": 2,
@@ -13,6 +23,12 @@ var job2 = {
     "period": "seconds"
   },
   "queue": "SITE_1"
+  // "links": {
+  //   "results": "/api/v1/jobs/2/results",
+  // }
+  // "results": a.map(function(item) {
+  //   return getRandomIntInclusive(1, 1000);
+  // })
 }
 
 var job3 = {
@@ -29,6 +45,9 @@ var job3 = {
     "period": "seconds"
   },
   "queue": "SITE_1"
+  // "links": {
+  //   "results": "/api/v1/jobs/3/results",
+  // }
 }
 
 var job4 = {
@@ -53,6 +72,9 @@ var job4 = {
     "period": "seconds"
   },
   "queue": "SITE_1"
+  // "links": {
+  //   "results": "/api/v1/jobs/4/results",
+  // }
 }
 
 module.exports = function(app) {
