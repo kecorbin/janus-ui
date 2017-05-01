@@ -1,0 +1,17 @@
+<h1> add a new job </h1>
+
+<div class="col-md-4">
+    <div class="list-group">
+      <div class="list-group-item">
+
+        <ul>
+          <li>{{input type="text" value=newName placeholder="Job Name" }}</li>
+          <li>{{input type="text" value=image placeholder="Image" }}</li>
+        </ul>
+
+        <button class="btn btn-primary" {{action "createJob"}}>Create</button>
+
+      </div>
+    </div>
+</div>
+{{outlet}}
