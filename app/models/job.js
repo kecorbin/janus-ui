@@ -9,6 +9,7 @@ export default DS.Model.extend({
   enabled: DS.attr(),
   interval: DS.attr(),
   queue: DS.attr(),
-
+  passed_count: DS.attr(),
+  failed_count: DS.attr(),
   results: DS.hasMany('result')
 });
