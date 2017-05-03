@@ -40,9 +40,9 @@
                 {{#link-to "jobs.show" job }}
                   <span class="pe-7s-note" style="font-size:32px; text-align: center; color:blue;"></span>
                 {{/link-to}}
-                <a href="#" {{action "deleteJob" job}}>
+                {{#link-to "jobs.delete" job }}
                   <span class="pe-7s-trash" style="font-size:32px; text-align: center; color:red;"></span>
-                </a>
+                {{/link-to}}
               </td>
             </tr>
 

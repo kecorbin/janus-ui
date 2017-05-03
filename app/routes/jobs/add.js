@@ -16,10 +16,8 @@ export default Ember.Route.extend({
         queue: controller.get("queue"),
 
       });
-      job.save()
+      job.save().then(() => this.transitionTo('jobs'));
 
-      // redirect user back to jobs page
-      //this.transitionTo('jobs')
     }
   }
 });
