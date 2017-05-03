@@ -10,12 +10,14 @@ Router.map(function() {
   this.route('jobs', function() {
     this.route('add', { path: '/add' });
     this.route('show', { path: '/:id' });
-
-    this.route('add');
   });
   this.route('results', function() {
     this.route('show', { path: '/:id' });
 
+  });
+  this.route('environments', function() {
+    this.route('add', { path: '/:id'});
+    this.route('show', { path: '/:id' });
   });
 });
 

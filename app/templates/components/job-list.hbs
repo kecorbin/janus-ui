@@ -19,12 +19,13 @@
             <th>Name</th>
             <th>Type</th>
             <th>Image</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           {{#each jobs as |job|}}
-           {{#link-to "jobs.show" job tagName="tr"}}
-              <td>{{job.id}}</td>
+            <tr>
+               <td>{{job.id}}</td>
               <td>
                 {{job-active-toggle job=job}}
               </td>
@@ -35,7 +36,17 @@
               <td>{{job.name}}</td>
               <td>{{job.type}}</td>
               <td>{{job.image}}</td>
-            {{/link-to}}
+              <td>
+                {{#link-to "jobs.show" job }}
+                  <span class="pe-7s-note" style="font-size:32px; text-align: center; color:blue;"></span>
+                {{/link-to}}
+                <a href="#" {{action "deleteJob" job}}>
+                  <span class="pe-7s-trash" style="font-size:32px; text-align: center; color:red;"></span>
+                </a>
+              </td>
+            </tr>
+
+
           {{/each}}
         </tbody>
       </table>
