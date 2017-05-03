@@ -1,8 +1,8 @@
-import DS from 'ember-data';
+import DRFAdapter from './drf';
 import ENV from 'collins-ui/config/environment';
 
-// export default DS.JSONAPIAdapter.extend({
-export default DS.RESTAdapter.extend({
+export default DRFAdapter.extend({
+  addTrailingSlashes: false,
   host: ENV.apiHost,
   namespace: 'api/v1'
 });
