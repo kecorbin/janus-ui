@@ -1,8 +1,17 @@
+<div class="card" style="text-align: center;">
+
 <h1> Warning! You are about to delete the job {{model.name}}</h1>
 
-<h3>Are you sure?</h3>
+<h2>Are you sure?</h2>
+<div class="row">
+    <button class="btn btn-danger" {{action "deleteJob" model}}>Yes, I'm Sure</button>
+    <div class="col-md-2" />
+    {{#link-to "jobs" }}
+    <button class="btn btn-primary">Just kidding</button>
+    {{/link-to}}
+  
+</div>
+<div class="row" />
 
-<p>
-<button class="btn btn-danger" {{action "deleteJob" model}}>Yes, I'm Sure</button>
-</p>
+</div>
 {{outlet}}
