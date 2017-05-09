@@ -1,7 +1,12 @@
+[![Build Status](https://travis-ci.org/kecorbin/ember-collins-ui.svg?branch=master)](https://travis-ci.org/kecorbin/ember-collins-ui)
+
 # collins-ui
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is the user interface for collins https://github.com/imapex/collins
+
+
+Collins is a distributed task processor which can control worker nodes at various sites from a central console. Tasks can be scheduled, and executed at a regular frequency or be executed in an ad-hoc file. The worker nodes require only outbound IP access to the Cloud based API. A task is anything that can be wrapped in a Docker container, and output some basic HTML tags which will be rendered at the central console.
+
 
 ## Prerequisites
 
