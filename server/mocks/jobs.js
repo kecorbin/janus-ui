@@ -23,12 +23,6 @@ var job2 = {
     "period": "seconds"
   },
   "queue": "SITE_1"
-  // "links": {
-  //   "results": "/api/v1/jobs/2/results",
-  // }
-  // "results": a.map(function(item) {
-  //   return getRandomIntInclusive(1, 1000);
-  // })
 }
 
 var job3 = {
@@ -45,9 +39,6 @@ var job3 = {
     "period": "seconds"
   },
   "queue": "SITE_1"
-  // "links": {
-  //   "results": "/api/v1/jobs/3/results",
-  // }
 }
 
 var job4 = {
@@ -72,9 +63,7 @@ var job4 = {
     "period": "seconds"
   },
   "queue": "SITE_1"
-  // "links": {
-  //   "results": "/api/v1/jobs/4/results",
-  // }
+
 }
 
 module.exports = function(app) {
