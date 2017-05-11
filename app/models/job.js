@@ -11,5 +11,5 @@ export default DS.Model.extend({
   queue: DS.attr(),
   passed_count: DS.attr(),
   failed_count: DS.attr(),
-  results: DS.hasMany('result')
+  results: DS.hasMany('result', { async: true })
 });
