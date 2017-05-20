@@ -1,4 +1,23 @@
-<form {{action 'authenticate' on='submit'}}>
+       <form class="form-signin" {{action 'authenticate' on='submit'}}>
+         <p>
+           <h2 class="form-signin-heading">interthings.io signin</h2>
+           <label for="username" class="sr-only">Username</label>
+           {{input id='username' class='form-control' placeholder='Enter Login' value=username}}
+           <!-- <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> -->
+         </p>
+         <p>
+          <label for="password" class="sr-only">password</label>
+
+           {{input id='password' class='form-control' placeholder='Enter Password' type='password' value=password}}
+           <!-- <input type="password" id="inputPassword" class="form-control" placeholder="Password" required> -->
+         </p>
+
+           <p>
+         <button class="btn btn-lg btn-primary btn-block" type="submit">login</button>
+       </p>
+       </form>
+
+<!-- <form {{action 'authenticate' on='submit'}}>
   <p>
     <label for="username">Login</label>
     {{input id='username' placeholder='Enter Login' value=username}}
@@ -14,4 +33,4 @@
     <p>Login Failed </p>
   {{/if}}
 </form>
-{{outlet}}
+{{outlet}} -->
