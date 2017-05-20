@@ -25,11 +25,20 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.apiHost = 'http://127.0.0.1:8000'
+    ENV.APP.LOG_ACTIVE_GENERATION = true;
+    ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiHost = 'http://127.0.0.1:8000';
+    // authentication
+    ENV['ember-simple-auth'] = {
+      authenticationRoute: 'login',
+      routeAfterAuthentication: 'jobs',
+      routeIfAlreadyAuthenticated: 'tunnels',
+      
+    };
+
+
   }
 
   if (environment === 'test') {
@@ -41,12 +50,13 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-    ENV.apiHost = 'http://collins.interthings.io:8000'
+    ENV.apiHost = 'https://api.interthings.io'
   }
 
   if (environment === 'production') {
 
   }
+
 
   return ENV;
 };

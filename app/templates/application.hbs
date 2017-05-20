@@ -1,23 +1,36 @@
 <div class="wrapper">
-  <div class="sidebar" data-color="blue" data-image="assets/img/sidebar.jpg">
+  <div class="sidebar" data-color="blue">
     <div class="sidebar-wrapper">
       <div class="logo">
         <a href="https://github.com/imapex/collins" class="simple-text">
-        Collins
+        interthings.io
         </a>
       </div>
       <ul class="nav">
         <li>
-          {{#link-to "index"}}<i class="pe-7s-home"></i><p>Dashboard</p>{{/link-to}}
+          {{#link-to "index"}}<i class="pe-7s-home"></i><p>Sites</p>{{/link-to}}
         </li>
         <li>
-          {{#link-to "environments"}}<i class="pe-7s-tools"></i><p>Environments</p>{{/link-to}}
+          {{#link-to "environments"}}<i class="pe-7s-tools"></i><p>Systems</p>{{/link-to}}
         </li>
+        <li>
+          {{#link-to "tunnels"}}<i class="pe-7s-share"></i><p>Connect</p>{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "scans"}}<i class="pe-7s-helm"></i><p>Network Scans</p>{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "speedtests"}}<i class="fa fa-dashboard"></i><p>Speed Tests</p>{{/link-to}}
+        </li>
+
         <li>
           {{#link-to "jobs"}}<i class="pe-7s-stopwatch"></i><p>Scheduled Jobs</p>{{/link-to}}
         </li>
         <li>
           {{#link-to "results"}}<i class="pe-7s-news-paper"></i><p>Results</p>{{/link-to}}
+        </li>
+        <li>
+          <a href=""><i class="pe-7s-volume"></i><p>Notifications</p></a>
         </li>
       </ul>
     </div>
@@ -38,13 +51,14 @@
 
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li>
+              <!-- <li>
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-dashboard"></i>
                   <p class="hidden-lg hidden-md">Dashboard</p>
                 </a>
-              </li>
-              <li class="dropdown">
+              </li> -->
+
+              <!-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <i class="fa fa-globe"></i>
                   <b class="caret hidden-sm hidden-xs"></b>
@@ -61,17 +75,18 @@
                   <li><a href="#">Notification 4</a></li>
                   <li><a href="#">Another notification</a></li>
                 </ul>
-              </li>
-              <li>
+              </li> -->
+
+              <!-- <li>
                 <a href="">
                   <i class="fa fa-search"></i>
                   <p class="hidden-lg hidden-md">Search</p>
                 </a>
-              </li>
+              </li> -->
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
-              <li>{{#link-to "index"}}Account{{/link-to}}</li>
+              <!-- <li>{{#link-to "index"}}Account{{/link-to}}</li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <p>
@@ -89,11 +104,14 @@
                   <li><a href="#">Separated link</a></li>
                 </ul>
               </li>
+ -->
 
               <li>
-                <a href="#">
-                  <p>Log out</p>
-                </a>
+                {{#if session.isAuthenticated}}
+                  <a {{action 'invalidateSession'}}>Logout</a>
+                {{else}}
+                  {{#link-to 'login'}}Login{{/link-to}}
+                {{/if}}
               </li>
 
               <li class="separator hidden-lg hidden-md"></li>

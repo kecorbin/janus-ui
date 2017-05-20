@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="header">
+    <div class="col-md-8">
+      <h4 class="title">{{title}}</h4>
+    </div>
+    <div class="col-md-4">
+      {{#link-to 'jobs.add'}}<button class="btn btn-primary" type="button">Add Job</button> {{/link-to}}
+    </div>
+  </div>
+  <div class="content">
+    <div class="table-responsive table-full-width">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Type</th>
+            <th>Destination</th>
+            <th>Processed</th>
+            <th>Last Result</th>
+            <th>Date</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {{#each jobs as |job|}}
+            <tr>
+               <td>{{job.id}}</td>
+               <td>{{job.processed}}</td>
+               <td>{{jobs.results}}</td>
+            </tr>
+
+
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

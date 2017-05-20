@@ -11,6 +11,7 @@ Router.map(function() {
     this.route('add', { path: '/add' });
     this.route('show', { path: '/:id' });
     this.route('delete', { path: '/delete/:id' });
+    this.route('scans');
   });
   this.route('results', function() {
     this.route('show', { path: '/:id' });
@@ -20,6 +21,10 @@ Router.map(function() {
     this.route('add', { path: '/:id'});
     this.route('show', { path: '/:id' });
   });
+  this.route('tunnels');
+  this.route('scans');
+  this.route('speedtests');
+  this.route('login');
 });
 
 export default Router;
