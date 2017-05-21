@@ -22,19 +22,17 @@
         </thead>
         <tbody>
           {{#each scans as |scan|}}
-
-
-             {{#link-to "scans.show" scan tagName="tr"}}
-
-               <td>{{scan.id}}</td>
-               <td>{{scan.type}}</td>
-               <td>{{scan.destination}}</td>
-               <td>{{scan.processed}}</td>
-               <td>{{scan.created}}</td>
-               <td>{{scan.modified}}</td>
-               <!-- <td>{{scan.results}}</td> -->
-             {{/link-to}}
-
+            {{#if (not-eq scan.type 'speedtest')}}
+               {{#link-to "scans.show" scan tagName="tr"}}
+                 <td>{{scan.id}}</td>
+                 <td>{{scan.type}}</td>
+                 <td>{{scan.destination}}</td>
+                 <td>{{scan.processed}}</td>
+                 <td>{{scan.created}}</td>
+                 <td>{{scan.modified}}</td>
+                 <!-- <td>{{scan.results}}</td> -->
+               {{/link-to}}
+             {{/if}}
 
 
           {{/each}}

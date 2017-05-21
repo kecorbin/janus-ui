@@ -29,13 +29,13 @@ module.exports = function(environment) {
     ENV.APP.LOG_TRANSITIONS = true;
     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.apiHost = 'http://127.0.0.1:8000';
+    ENV.apiHost = 'https://test.interthings.io';
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',
       routeAfterAuthentication: 'jobs',
       routeIfAlreadyAuthenticated: 'tunnels',
-      
+
     };
 
 
@@ -50,10 +50,26 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-    ENV.apiHost = 'https://api.interthings.io'
+    ENV.apiHost = 'https://test.interthings.io';
+    // authentication
+    ENV['ember-simple-auth'] = {
+      authenticationRoute: 'login',
+      routeAfterAuthentication: 'jobs',
+      routeIfAlreadyAuthenticated: 'tunnels',
+
+    };
+
   }
 
   if (environment === 'production') {
+    ENV.apiHost = 'https://test.interthings.io';
+    // authentication
+    ENV['ember-simple-auth'] = {
+      authenticationRoute: 'login',
+      routeAfterAuthentication: 'jobs',
+      routeIfAlreadyAuthenticated: 'tunnels',
+
+    };
 
   }
 

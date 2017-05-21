@@ -1,0 +1,38 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card-wrap">
+        <div class="card">
+          <div class="container">
+            <h1> Add A Scan Job </h1>
+            <hr>
+            <div class="col-md-4">
+              <form>
+                <div class="form-group">
+                  <div class="form-group row">
+                    {{input type="text" class="form-control" value=destination placeholder="192.168.1.0/24" }}
+                  </div>
+                  <div class="form-group row">
+                    {{input type="text" class="form-control" value=type placeholder="quick-vendor" }}
+                      <!-- <select class="form-control" value="{{type}}">
+                        <option value="quick-vendor">quick-vendor</option>
+                        <option value="scan">scan</option>
+                      </select> -->
+
+                  </div>
+                  <!-- <button type="submit" class="btn btn-primary btn-lg">Submit</button> -->
+                   <button class="btn btn-primary" {{action "createScan"}}>Create</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{outlet}}
+
+{{outlet}}

@@ -1,7 +1,48 @@
 {{#if (eq scan.type 'speedtest')}}
   {{speedtest-result-detail speedtest=scan}}
+
 {{else}}
-Found {{scan.results.nmap.scanstats.uphosts}} Hosts
+
+<div class="card">
+  <div class="header">
+    <h4 class="title">Scan found {{scan.results.nmap.scanstats.uphosts}} Hosts</h4>
+  </div>
+  <div class="content">
+    <div class="table-responsive table-full-width">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>MAC</th>
+            <th>Vendor</th>
+            <th>IP</th>
+            <th>Status</th>
+            <th>Operating System</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each-in scan.results.scan  as |host details|}}
+            <tr>
+               <td>{{details.addresses.mac}}</td>
+               <td>
+                 {{#each-in details.vendor as |mac vendor|}}
+                   {{vendor}}
+                 {{/each-in}}
+               </td>
+              <td>{{host}}</td>
+              <td>{{details.status.state}}</td>
+              <td>
+                {{#each details.osmatch as |osmatch|}}
+                  {{osmatch.name}}
+                {{/each}}
+              </td>
+            </tr>
+          {{/each-in}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 <!-- {{scan.results}} -->
 {{/if}}
 {{yield}}

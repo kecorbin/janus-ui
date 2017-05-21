@@ -24,6 +24,7 @@ Router.map(function() {
   this.route('tunnels');
   this.route('scans', function() {
     this.route('show', { path: '/:id'});
+    this.route('add', { path: '/add'});
   });
   this.route('speedtests');
   this.route('login');
