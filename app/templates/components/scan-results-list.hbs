@@ -3,9 +3,7 @@
     <div class="col-md-8">
       <h4 class="title">{{title}}</h4>
     </div>
-    <div class="col-md-4">
-      {{#link-to 'jobs.add'}}<button class="btn btn-primary" type="button">Add Job</button> {{/link-to}}
-    </div>
+
   </div>
   <div class="content">
     <div class="table-responsive table-full-width">
@@ -16,17 +14,23 @@
             <th>Type</th>
             <th>Destination</th>
             <th>Processed</th>
-            <th>Last Result</th>
-            <th>Date</th>
+            <th>Started</th>
+            <th>Ended</th>
+            <!-- <th>Last Result</th> -->
 
           </tr>
         </thead>
         <tbody>
-          {{#each jobs as |job|}}
+          {{#each scans as |scan|}}
             <tr>
-               <td>{{job.id}}</td>
-               <td>{{job.processed}}</td>
-               <td>{{jobs.results}}</td>
+               <td>{{scan.id}}</td>
+               <td>{{scan.type}}</td>
+               <td>{{scan.destination}}</td>
+               <td>{{scan.processed}}</td>
+               <td>{{scan.created}}</td>
+               <td>{{scan.modified}}</td>
+               <!-- <td>{{scan.results}}</td> -->
+
             </tr>
 
 

@@ -22,7 +22,9 @@ Router.map(function() {
     this.route('show', { path: '/:id' });
   });
   this.route('tunnels');
-  this.route('scans');
+  this.route('scans', function() {
+    this.route('show');
+  });
   this.route('speedtests');
   this.route('login');
 });
