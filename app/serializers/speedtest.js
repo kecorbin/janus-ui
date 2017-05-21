@@ -2,9 +2,7 @@ import DRFSerializer from './drf';
 
 export default DRFSerializer.extend({
   normalizeResponse(store, primaryModelClass, payload) {
-  console.log('normalizing')
   if (payload) {
-      console.log('have array ')
       payload.forEach(parseResults)
   }
   else {

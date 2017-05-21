@@ -25,12 +25,12 @@
           {{#each tunnels as |tunnel|}}
             <tr>
               <td>{{tunnel.id}}</td>
-              <td>{{tunnel.proxyport.cloudserver.fqdn}}</td>
+              <td>{{tunnel.proxyport.cloudserver.fqdn}}:{{tunnel.proxyport.proxyport}}</td>
               <td>{{tunnel.url}}</td>
               <td>{{tunnel.remotehost}}</td>
               <td>{{tunnel.remoteport}}</td>
               <td>{{tunnel.sourceip}}</td>
-              
+
             </tr>
 
 
