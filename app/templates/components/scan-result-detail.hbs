@@ -1,3 +1,7 @@
+{{#if (eq scan.type 'speedtest')}}
+  {{speedtest-result-detail speedtest=scan}}
+{{else}}
 Found {{scan.results.nmap.scanstats.uphosts}} Hosts
 <!-- {{scan.results}} -->
+{{/if}}
 {{yield}}

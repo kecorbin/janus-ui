@@ -8,7 +8,11 @@
         <thead>
           <tr>
             <th>ID</th>
-            <th>Result</th>
+            <th>ISP</th>
+            <th>Download</th>
+            <th>Upload</th>
+            <th>Latency</th>
+            <th>Sponsor</th>
 
           </tr>
         </thead>
@@ -16,7 +20,11 @@
           {{#each speedtests as |speedtest|}}
            <tr>
               <td>{{speedtest.id}}</td>
-              <td>{{speedtest.results}}</td>
+              <td>{{speedtest.results.isp}}</td>
+              <td>{{speedtest.results.download}}</td>
+              <td>{{speedtest.results.upload}}</td>
+              <td>{{speedtest.results.latency}}</td>
+              <td>{{speedtest.results.sponsor}}</td>
             </tr>
           {{/each}}
         </tbody>

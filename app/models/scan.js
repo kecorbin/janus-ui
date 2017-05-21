@@ -6,7 +6,7 @@ export default DS.Model.extend({
   processed: DS.attr('boolean'),
   ports: DS.attr(),
   results: DS.attr(),
-  created: DS.attr(),
-  modified: DS.attr(),
+  created: DS.attr('date'),
+  modified: DS.attr('date'),
 
 });
