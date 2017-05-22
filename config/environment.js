@@ -30,6 +30,7 @@ module.exports = function(environment) {
     ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.apiHost = 'https://test.interthings.io';
+    ENV.collinsHost = 'http://collins.interthings.io:8000'
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',

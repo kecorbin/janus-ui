@@ -21,12 +21,16 @@ Router.map(function() {
     this.route('add', { path: '/:id'});
     this.route('show', { path: '/:id' });
   });
-  this.route('tunnels');
+  this.route('tunnels', function() {
+    this.route('add');
+  });
   this.route('scans', function() {
     this.route('show', { path: '/:id'});
     this.route('add', { path: '/add'});
   });
-  this.route('speedtests');
+  this.route('speedtests', function() {
+    this.route('add', { path: '/add'});
+  });
   this.route('login');
 });
 

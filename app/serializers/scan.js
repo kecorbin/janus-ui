@@ -2,7 +2,7 @@ import DRFSerializer from './drf';
 
 export default DRFSerializer.extend({
   normalizeResponse(store, primaryModelClass, payload) {
-  if (payload) {
+  if (payload instanceof Array) {
       payload.forEach(parseResults)
   }
   else {
