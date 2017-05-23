@@ -11,7 +11,6 @@ export default Ember.Route.extend(ApplicationRouteMixin, UnauthenticatedRouteMix
       let { username, password } = this.getProperties('username', 'password');
       this.get('session').authenticate('authenticator:drf-token-authenticator', username, password).catch((reason) => {
         this.set('error', reason);
-      console.log(this.get('session'))
       });
     }
   }

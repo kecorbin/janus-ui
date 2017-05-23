@@ -13,7 +13,6 @@ export default Ember.Route.extend({
             parseFloat(r.get('results').download),
             parseFloat(r.get('results').upload)
           ]
-          console.log(resultMap)
           dataMap.push(resultMap)
         }
         )
