@@ -21,18 +21,18 @@
         </thead>
         <tbody>
           {{#each tunnels as |tunnel|}}
-            {{#if tunnel.proxyport.cloudserver.fqdn}}
-                <div></div>
-            {{else}}
-              <tr>
-                <td>{{tunnel.id}}</td>
-                <td>{{tunnel.remotehost}}</td>
-                <td>{{tunnel.remoteport}}</td>
-                <td>{{tunnel.created}}</td>
-                <td>{{tunnel.timeout}} minutes</td>
-                <td>{{tunnel.sourceip}}</td>
+            {{#if tunnel.processed}}
 
-              </tr>
+
+                <tr>
+                  <td>{{tunnel.id}}</td>
+                  <td>{{tunnel.remotehost}}</td>
+                  <td>{{tunnel.remoteport}}</td>
+                  <td>{{tunnel.created}}</td>
+                  <td>{{tunnel.timeout}} minutes</td>
+                  <td>{{tunnel.sourceip}}</td>
+
+                </tr>
             {{/if}}
 
 

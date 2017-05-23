@@ -27,11 +27,18 @@
         </thead>
         <tbody>
           {{#each tunnels as |tunnel|}}
-            {{#if tunnel.proxyport.cloudserver.fqdn}}
+            {{#if tunnel.processed}}
+            {{else}}
             <tr>
               <td>{{tunnel.id}}</td>
               <td>{{tunnel.proxyport.cloudserver.fqdn}}:{{tunnel.proxyport.proxyport}}</td>
-              <td><a href="{{tunnel.url}}">{{tunnel.url}}</a></td>
+              <td>{{#if tunnel.url}}
+                  <a href="{{tunnel.url}}">{{tunnel.url}}</a>
+                  {{else}}
+                    <strong>Could not generate dynamic url...you might try</strong><br>
+                    telnet {{tunnel.proxyport.cloudserver.fqdn}} {{tunnel.proxyport.proxyport}}
+                  {{/if}}
+              </td>
               <td>{{tunnel.remotehost}}</td>
               <td>{{tunnel.remoteport}}</td>
               <td>{{tunnel.created}}</td>

@@ -11,7 +11,9 @@ export default DRFSerializer.extend({
 
     // if url contains None, we null it out
     function parseResults(tunnel) {
-      if (tunnel.url.includes('None')) {
+      if (tunnel.url == null){
+        tunnel.url = null
+      } else if (tunnel.url.includes('None')) {
           tunnel.url = null
       }
 
@@ -22,5 +24,6 @@ export default DRFSerializer.extend({
 
   attrs: {
     sourceip: { serialize: false },
+    processed: {serialize: false}
   }
 });
