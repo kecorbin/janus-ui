@@ -19,6 +19,7 @@
             <th>Name</th>
             <th>Type</th>
             <th>Image</th>
+            <th>Environment</th>
             <th>Schedule</th>
             <th>Actions</th>
           </tr>
@@ -37,7 +38,8 @@
               <td>{{job.name}}</td>
               <td>{{job.type}}</td>
               <td>{{job.image}}</td>
-              <td>{{job.interval.every}} {{job.interval.period}}</td> 
+              <td><a href="#">View/Edit</a></td>
+              <td>{{job.interval.every}} {{job.interval.period}}</td>
               <td>
                 {{#link-to "jobs.show" job.id }}
                   <span class="pe-7s-note" style="font-size:32px; text-align: center; color:blue;"></span>
