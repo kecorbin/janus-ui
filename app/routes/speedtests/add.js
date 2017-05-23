@@ -8,7 +8,7 @@ export default Ember.Route.extend({
       // gather info
       let controller = this.get('controller');
 
-      let speedtest = this.store.createRecord('job', {
+      let speedtest = this.store.createRecord('speedtest', {
         type: 'speedtest',
 
 

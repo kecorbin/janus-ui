@@ -16,5 +16,11 @@ export default DRFSerializer.extend({
     return result
   }
    return this._super(...arguments);
- }
+ },
+
+ attrs: {
+     processed: { serialize: false },
+     jobId: { serialize: false },
+   }
+
 });
