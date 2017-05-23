@@ -26,8 +26,8 @@
         </thead>
         <tbody>
           {{#each jobs as |job|}}
-            <tr>
-               <td>{{job.id}}</td>
+            {{#link-to "jobs.show" job.id tagName="tr"}}
+              <td>{{job.id}}</td>
               <td>
                 {{job-active-toggle job=job}}
               </td>
@@ -48,9 +48,7 @@
                   <span class="pe-7s-trash" style="font-size:32px; text-align: center; color:red;"></span>
                 {{/link-to}}
               </td>
-            </tr>
-
-
+            {{/link-to }}
           {{/each}}
         </tbody>
       </table>
