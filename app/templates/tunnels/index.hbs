@@ -1,3 +1,5 @@
-<h1>hello</h1>
-{{tunnel-list title="Tunnels" tunnels=model.tunnels}}
+{{tunnel-help-card}}
+{{tunnel-list-active title="Active Tunnels" tunnels=model.tunnels}}
+
+{{tunnel-list title="Expired Tunnels" tunnels=model.tunnels}}
 {{outlet}}

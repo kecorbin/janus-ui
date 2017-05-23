@@ -8,4 +8,5 @@ export default DS.Model.extend({
   sourceip: DS.attr('string'),
   processed: DS.attr('boolean'),
   url: DS.attr('string'),
+  created: DS.attr('date'),
 });

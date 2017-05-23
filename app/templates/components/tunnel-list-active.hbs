@@ -1,0 +1,51 @@
+<div class="card">
+  <div class="header">
+    <div class="col-md-8">
+      <h4 class="title">{{title}}</h4>
+    </div>
+
+      <div class="col-md-4">
+        {{#link-to 'tunnels.add'}}<button class="btn btn-primary" type="button">New Tunnel</button> {{/link-to}}
+      </div>
+
+  </div>
+  <div class="content">
+    <div class="table-responsive table-full-width">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Proxy Host</th>
+            <th>Secure URL</th>
+            <th>Remote Device</th>
+            <th>Remote Port</th>
+            <th>Created</th>
+            <th>Time Remaining</th>
+            <th>Secured for</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          {{#each tunnels as |tunnel|}}
+            {{#if tunnel.proxyport.cloudserver.fqdn}}
+            <tr>
+              <td>{{tunnel.id}}</td>
+              <td>{{tunnel.proxyport.cloudserver.fqdn}}:{{tunnel.proxyport.proxyport}}</td>
+              <td><a href="{{tunnel.url}}">{{tunnel.url}}</a></td>
+              <td>{{tunnel.remotehost}}</td>
+              <td>{{tunnel.remoteport}}</td>
+              <td>{{tunnel.created}}</td>
+              <td>{{tunnel.timeout}}(not-impl)</td>
+
+              <td>{{tunnel.sourceip}}</td>
+
+            </tr>
+            {{/if}}
+
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{{outlet}}
