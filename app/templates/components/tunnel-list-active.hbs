@@ -33,7 +33,7 @@
               <td>{{tunnel.id}}</td>
               <td>{{tunnel.proxyport.cloudserver.fqdn}}:{{tunnel.proxyport.proxyport}}</td>
               <td>{{#if tunnel.url}}
-                  <a href="{{tunnel.url}}">{{tunnel.url}}</a>
+                  <a target="_blank" href="{{tunnel.url}}">{{tunnel.url}}</a>
                   {{else}}
                     <strong>Could not generate dynamic url, you might try:</strong><br>
                     telnet {{tunnel.proxyport.cloudserver.fqdn}} {{tunnel.proxyport.proxyport}}
