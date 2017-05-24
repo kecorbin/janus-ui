@@ -3,6 +3,23 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
+  actions: {
+    createSpeedTest() {
+      // called when submit button is pushed
+
+      // gather info
+      let controller = this.get('controller');
+
+      let speedtest = this.store.createRecord('speedtest', {
+        type: 'speedtest',
+
+
+      });
+      speedtest.save().then(() => this.transitionTo('speedtests'));
+
+    }
+  },
+
   generatedata() {
     var dataMap = [['Date', 'Download', 'Upload']]
     var store = this.get('store').findAll('speedtest').then(
@@ -24,14 +41,6 @@ export default Ember.Route.extend({
     return {
       'speedtests': this.get('store').findAll('speedtest', { reload: true }),
       'chartdata': this.generatedata()
-
-    //   [
-    //   ['Date', 'Download', 'Upload'],
-    //   ['2004', 1000, 400],
-    //   ['2005', 1170, 460],
-    //   ['2006', 660, 1120],
-    //   ['2007', 1030, 540],
-    // ],
     };
   }
 });
