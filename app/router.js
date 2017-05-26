@@ -32,6 +32,7 @@ Router.map(function() {
     this.route('add', { path: '/add'});
   });
   this.route('login');
+  this.route('plugins');
 });
 
 export default Router;
