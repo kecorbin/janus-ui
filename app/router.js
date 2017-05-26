@@ -33,6 +33,8 @@ Router.map(function() {
   });
   this.route('login');
   this.route('plugins');
+  this.route('gateways');
+  this.route('sites');
 });
 
 export default Router;

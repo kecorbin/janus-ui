@@ -25,12 +25,12 @@ module.exports = function(environment) {
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
-    ENV.APP.LOG_ACTIVE_GENERATION = true;
-    ENV.APP.LOG_TRANSITIONS = true;
-    ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.apiHost = 'https://test.interthings.io';
-    ENV.collinsHost = 'http://collins.interthings.io:8000'
+    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    // ENV.APP.LOG_TRANSITIONS = true;
+    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.apiHost = 'http://janus.interthings.io';
+    ENV.collinsHost = 'http://janus.interthings.io';
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',
@@ -63,8 +63,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'https://test.interthings.io';
-    ENV.collinsHost = 'http://collins.interthings.io:8000'
+    ENV.apiHost = 'http://janus.interthings.io',
+    ENV.collinsHost = 'http://janus.interthings.io'
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',
