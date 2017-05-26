@@ -6,6 +6,6 @@ export default ApplicationAdapter.extend({
   authorizer: 'authorizer:drf-token-authorizer',
   addTrailingSlashes: false,
   urlForCreateRecord(model, snapshot) {
-    return ENV.apiHost + '/api/v1/createtunnel'
+    return ENV.apiHost + '/api/v1/createtunnel/'
   }
 });
