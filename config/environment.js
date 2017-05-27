@@ -43,7 +43,7 @@ module.exports = function(environment) {
 
   if (environment === 'test') {
     // Testem prefers this...
-    ENV.locationType = 'none';
+    ENV.locationType = 'hash';
 
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
@@ -62,7 +62,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'https://api.interthings.io',
+    ENV.apiHost = 'https://test.interthings.io',
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',
