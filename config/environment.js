@@ -29,7 +29,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.apiHost = 'http://janus.interthings.io';
+    ENV.apiHost = 'http://127.0.0.1:8000';
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',
@@ -62,7 +62,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'http://janus.interthings.io',
+    ENV.apiHost = 'https://api.interthings.io',
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',
