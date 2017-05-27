@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'collins-ui',
     environment: environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -62,7 +62,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'http://api.interthings.io',
+    ENV.apiHost = 'http://janus.interthings.io',
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',
