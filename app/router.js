@@ -38,6 +38,10 @@ Router.map(function() {
   this.route('systems', function() {
     this.route('show');
   });
+  this.route('device');
+  this.route('devices', function() {
+    this.route('show');
+  });
 });
 
 export default Router;
