@@ -1,8 +1,3 @@
-{{#if (eq scan.type 'speedtest')}}
-  {{speedtest-result-detail speedtest=scan}}
-
-{{else}}
-
 <div class="card">
   <div class="header">
     <h4 class="title">Scan found {{scan.results.nmap.scanstats.uphosts}} Hosts</h4>
@@ -16,6 +11,9 @@
             <th>Vendor</th>
             <th>IP</th>
             <th>Status</th>
+            <th>Ports</th>
+            <th>Last Reboot</th>
+            <th>Operating System</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +27,21 @@
                </td>
               <td>{{host}}</td>
               <td>{{details.status.state}}</td>
+              <td>
+                    {{#each-in details.tcp as |port details|}}
+                    {{port}}/{{details.name}}
+                    {{/each-in}}
+
+              </td>
+              <td>
+                {{details.uptime.lastboot}}
+              </td>
+
+              <td>
+                {{#each details.osmatch as |osmatch|}}
+                  {{osmatch.name}}
+                {{/each}}
+              </td>
             </tr>
           {{/each-in}}
         </tbody>
@@ -36,7 +49,3 @@
     </div>
   </div>
 </div>
-
-<!-- {{scan.results}} -->
-{{/if}}
-{{yield}}
