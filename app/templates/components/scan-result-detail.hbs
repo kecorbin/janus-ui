@@ -16,6 +16,7 @@
             <th>Vendor</th>
             <th>IP</th>
             <th>Status</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +30,14 @@
                </td>
               <td>{{host}}</td>
               <td>{{details.status.state}}</td>
+              <td>
+                <ul style="list-style-type:none">
+                  <li><a href="#">Ping</a></li>
+                  <li><a href="#">Create Tunnel</a></li>
+                  <li><a href="#">Add a Health Check</a></li>
+                </ul>
+              </td>
+
             </tr>
           {{/each-in}}
         </tbody>

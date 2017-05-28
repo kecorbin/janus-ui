@@ -35,6 +35,9 @@ Router.map(function() {
   this.route('plugins');
   this.route('gateways');
   this.route('sites');
+  this.route('systems', function() {
+    this.route('show');
+  });
 });
 
 export default Router;

@@ -14,6 +14,7 @@
             <th>Ports</th>
             <th>Last Reboot</th>
             <th>Operating System</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -41,6 +42,13 @@
                 {{#each details.osmatch as |osmatch|}}
                   {{osmatch.name}}
                 {{/each}}
+              </td>
+              <td>
+                <ul style="list-style-type:none">
+                  <li><a href="#">Ping</a></li>
+                  <li><a href="#">Tunnel</a></li>
+                  <li><a href="#">Monitor</a></li>
+                </ul>
               </td>
             </tr>
           {{/each-in}}
