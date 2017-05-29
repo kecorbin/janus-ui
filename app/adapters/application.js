@@ -8,5 +8,5 @@ export default DRFAdapter.extend(DataAdapterMixin, {
   host: ENV.apiHost,
   namespace: 'api/v1',
   authorizer: 'authorizer:drf-token-authorizer',
-  
+
 });
