@@ -32,16 +32,25 @@ Router.map(function() {
     this.route('add', { path: '/add'});
   });
   this.route('login');
+
   this.route('plugins');
-  this.route('gateways');
+
+  this.route('gateways', function() {
+    this.route('show', { path: '/:id'});
+  });
+
   this.route('sites');
+
   this.route('systems', function() {
     this.route('show');
   });
+
   this.route('device');
+
   this.route('devices', function() {
     this.route('show');
   });
+
 });
 
 export default Router;

@@ -20,22 +20,13 @@
         </thead>
         <tbody>
           {{#each gateways as |gateway|}}
-            {{#link-to "gateways.show" job.id tagName="tr"}}
+            {{#link-to "gateways.show" gateway.id tagName="tr"}}
               <td>{{gateway.mac}}</td>
               <td>{{gateway.id}}</td>
               <td>{{gateway.version}}</td>
               <td>{{gateway.lanip}}</td>
               <td>{{gateway.wanip}}</td>
               <td>{{gateway.upgrade}}</td>
-              <!-- <td><a href="#">View/Edit</a></td>
-              <td>
-                {{#link-to "gateway.show" job.id }}
-                  <span class="pe-7s-note" style="font-size:32px; text-align: center; color:blue;"></span>
-                {{/link-to}}
-                {{#link-to "jobs.delete" job }}
-                  <span class="pe-7s-trash" style="font-size:32px; text-align: center; color:red;"></span>
-                {{/link-to}}
-              </td> -->
             {{/link-to }}
           {{/each}}
         </tbody>

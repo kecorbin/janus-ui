@@ -11,9 +11,12 @@ export default DS.Model.extend({
   created: DS.attr('date'),
   healthy: DS.attr('boolean'),
   upgrade: DS.attr('boolean'),
-  last_tested: DS.attr('date')
-
+  last_tested: DS.attr('date'),
+  tunnels: DS.hasMany('tunnel', { async: true }),
+  scans: DS.hasMany('scan', { async: true}),
+  speedtests: DS.hasMany('speedtest', { async: true})
 });
+
 // user = models.ForeignKey(User, null=True, blank=True)
 // mac = models.CharField(max_length=80)
 // version = models.CharField(max_length=16, default='unknown')
