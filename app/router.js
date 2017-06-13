@@ -29,7 +29,7 @@ Router.map(function() {
     this.route('add', { path: '/:id'});
   });
   this.route('speedtests', function() {
-    this.route('add', { path: '/add'});
+    this.route('add', { path: '/:id'});
   });
   this.route('login');
 
