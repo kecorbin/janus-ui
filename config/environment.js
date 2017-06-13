@@ -62,7 +62,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'https://test.interthings.io',
+    ENV.apiHost = 'https://collins.interthings.io',
     // authentication
     ENV['ember-simple-auth'] = {
       authenticationRoute: 'login',
