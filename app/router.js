@@ -39,7 +39,9 @@ Router.map(function() {
     this.route('show', { path: '/:id'}, function() {
       this.route('speedtests');
       this.route('tunnels');
-      this.route('scans');
+      this.route('scans', function() {
+        this.route('detail', {path: '/:scan_id'});
+      });
     });
   });
 

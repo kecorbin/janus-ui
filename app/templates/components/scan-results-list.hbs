@@ -22,7 +22,7 @@
         <tbody>
           {{#each scans as |scan|}}
             {{#if (not-eq scan.type 'speedtest')}}
-              <tr>
+               {{#link-to "gateways.show.scans.detail" scan tagName="tr"}}
                  <td>{{scan.id}}</td>
                  <td>{{scan.type}}</td>
                  <td>{{scan.destination}}</td>
@@ -30,7 +30,7 @@
                  <td>{{scan.created}}</td>
                  <td>{{scan.modified}}</td>
                  <!-- <td>{{scan.results}}</td> -->
-             </tr>
+             {{/link-to}}
              {{/if}}
 
 

@@ -1,0 +1,6 @@
+{{#if (eq model.type 'quick-vendor')}}
+  {{scan-result-detail scan=model}}
+{{else}}
+  {{scan-full-result-detail scan=model}}
+{{/if}}
+{{outlet}}
