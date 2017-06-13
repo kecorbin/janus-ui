@@ -1,0 +1,27 @@
+<div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+
+       <div class="btn-group" role="group">
+         {{#link-to "gateways.show.tunnels" gateway.id}}
+           <button type="button" id="tunnels" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="pe-7s-share" aria-hidden="true"></span>
+               <div class="hidden-xs">Tunnels</div>
+             </button>
+
+          {{/link-to}}
+
+       </div>
+       <div class="btn-group" role="group">
+         {{#link-to "gateways.show.scans" gateway.id}}
+           <button type="button" id="scans" class="btn btn-primary" href="#tab2" data-toggle="tab"><span class="pe-7s-helm" aria-hidden="true"></span>
+               <div class="hidden-xs">Scans</div>
+           </button>
+         {{/link-to}}
+       </div>
+       <div class="btn-group" role="group">
+         {{#link-to "gateways.show.speedtests" gateway.id}}
+           <button type="button" id="speedtests" class="btn btn-primary" href="#tab3" data-toggle="tab"><span class="fa fa-dashboard" aria-hidden="true"></span>
+               <div class="hidden-xs">Speedtests</div>
+           </button>
+         {{/link-to}}
+
+       </div>
+   </div>

@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  jobId: DS.belongsTo('job'),
+  gateway: DS.belongsTo('gateway'),
   results: DS.attr(),
   processed: DS.attr('boolean'),
   type: DS.attr(),

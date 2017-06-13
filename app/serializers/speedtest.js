@@ -20,7 +20,7 @@ export default DRFSerializer.extend({
 
  attrs: {
      processed: { serialize: false },
-     jobId: { serialize: false },
+
    }
 
 });

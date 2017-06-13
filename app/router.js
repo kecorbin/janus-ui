@@ -36,7 +36,11 @@ Router.map(function() {
   this.route('plugins');
 
   this.route('gateways', function() {
-    this.route('show', { path: '/:id'});
+    this.route('show', { path: '/:id'}, function() {
+      this.route('speedtests');
+      this.route('tunnels');
+      this.route('scans');
+    });
   });
 
   this.route('sites');
