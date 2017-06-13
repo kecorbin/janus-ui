@@ -12,7 +12,7 @@ export default Ember.Route.extend({
         type: 'speedtest',
         gateway: gateway
       });
-      speedtest.save().then(() => this.transitionTo('speedtests'));
+      speedtest.save().then(() => this.transitionTo('gateways.show.speedtests', gateway));
     }
   },
 
