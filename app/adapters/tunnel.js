@@ -7,7 +7,6 @@ export default ApplicationAdapter.extend({
   authorizer: 'authorizer:drf-token-authorizer',
   // determine appropriate POST url
   urlForCreateRecord(modelName, snapshot) {
-    console.log(snapshot)
     let gateway = snapshot.belongsTo('gateway');
     return `${this.host}/${this.namespace}/connect/gateways/${gateway}/tunnels`;
   }

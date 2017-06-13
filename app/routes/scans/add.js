@@ -9,7 +9,6 @@ export default Ember.Route.extend({
     createScan(gw) {
       // called when submit button is pushed
       let gateway = this.currentModel
-      console.log('foo')
       let controller = this.get('controller');
 
       var scan = this.store.createRecord('scan', {

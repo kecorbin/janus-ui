@@ -9,7 +9,6 @@ export default Ember.Controller.extend({
     },
     createScan(gw) {
       // called when submit button is pushed
-      console.log(this.get('type'))
       // gather info
       let scan = this.store.createRecord('scan', {
         destination: this.get("destination"),
