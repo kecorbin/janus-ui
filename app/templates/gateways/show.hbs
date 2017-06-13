@@ -42,17 +42,20 @@
           <!-- <div class="header">
               <h4 class="title">Quick Actions</h4>
           </div> -->
-              <button class="btn btn-primary btn-block" {{action "createScan"}}>Scan Network</button>
-              <button class="btn btn-primary btn-block" {{action "createTunnel"}}>Create Tunnel</button>
-              <button class="btn btn-primary btn-block  " {{action "createSpeedTest" model}}>Run Speed Test</button>
+              <button class="btn btn-primary btn-block" {{action "createScan" model}}>Scan Network</button>
+              {{#link-to "tunnels.add" model}}
+              <button class="btn btn-primary btn-block">Create Tunnel</button>
+              {{/link-to}}
+              <button class="btn btn-primary btn-block  " {{action "createSpeedTest" }}>Run Speed Test</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 {{gateway-detail-card gateway=model}}
+{{outlet}}
+
 <!--
     {{tunnel-list-active title="Active Tunnels" tunnels=model.tunnels}}
     {{tunnel-list title="Expired Tunnels" tunnels=model.tunnels}}
     {{speedtest-results title="Recent SpeedTests" speedtests=model.speedtests}} -->
-{{outlet}}

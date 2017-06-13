@@ -1,22 +1,24 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  actions: {
-    createTunnel() {
-      // called when submit button is pushed
+  model(params) {
+      return this.get('store').findRecord('gateway', params.id);
+    },
 
-      // gather info
+  actions: {
+    createTunnel(gw) {
+      // called when submit button is pushed
+      let gateway = this.currentModel
       let controller = this.get('controller');
 
-      let tunnel = this.store.createRecord('tunnel', {
+      var tunnel = this.store.createRecord('tunnel', {
         remotehost: controller.get("remotehost"),
         remoteport: controller.get("remoteport"),
-        timeout: controller.get("timeout"), 
-
-
+        timeout: controller.get("timeout"),
+        gateway: gateway
       });
-      tunnel.save().then(() => this.transitionTo('tunnels'));
 
-    }
+      tunnel.save().then(() => this.transitionTo('gateways.show'));
+    },
   }
 });

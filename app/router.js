@@ -22,7 +22,7 @@ Router.map(function() {
     this.route('show', { path: '/:id' });
   });
   this.route('tunnels', function() {
-    this.route('add');
+    this.route('add', { path: '/:id'});
   });
   this.route('scans', function() {
     this.route('show', { path: '/:id'});
