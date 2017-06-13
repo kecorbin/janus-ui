@@ -17,7 +17,7 @@ export default Ember.Route.extend({
         gateway: gateway
       });
 
-      scan.save().then(() => this.transitionTo('gateways.show'));
+      scan.save().then(() => this.transitionTo('gateways.show.scans', gateway));
     },
   }
 });
