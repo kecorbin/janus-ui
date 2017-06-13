@@ -7,13 +7,15 @@ export default Ember.Controller.extend({
     selectType(type) {
       this.set('type', type)
     },
-    createScan() {
+    createScan(gw) {
       // called when submit button is pushed
       console.log(this.get('type'))
       // gather info
       let scan = this.store.createRecord('scan', {
         destination: this.get("destination"),
         type: this.type,
+        gateway: this.get("model")
+
       });
       scan.save().then(() => this.transitionTo('scans'));
 

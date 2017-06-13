@@ -5,7 +5,8 @@ export default DRFSerializer.extend({
   normalizeResponse(store, primaryModelClass, payload) {
    payload.links = {
      tunnels: `tunnels/`,
-     speedtests: `speedtests/`
+     speedtests: `speedtests/`,
+     scans: `scans/`
    };
    return this._super(...arguments);
  }

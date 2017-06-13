@@ -26,7 +26,7 @@ Router.map(function() {
   });
   this.route('scans', function() {
     this.route('show', { path: '/:id'});
-    this.route('add', { path: '/add'});
+    this.route('add', { path: '/:id'});
   });
   this.route('speedtests', function() {
     this.route('add', { path: '/add'});
