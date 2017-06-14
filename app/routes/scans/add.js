@@ -19,5 +19,9 @@ export default Ember.Route.extend({
 
       scan.save().then(() => this.transitionTo('gateways.show.scans', gateway));
     },
+    closeModalDialog(){
+      let gateway = this.currentModel
+      this.set('isShowingModal', false).then(this.transitionTo('gateways.show.scans', gateway))
+    },
   }
 });
