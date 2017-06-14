@@ -1,2 +1,7 @@
-<button class="btn btn-primary" {{action "createSpeedTest"}}>Create Speed Test</button>
-{{outlet}}
+<!-- <button class="btn btn-primary" {{action "createSpeedTest"}}>Create Speed Test</button> -->
+{{#if isShowingModal}}
+  {{#modal-dialog translucentOverlay=true clickOutsideToClose=true onClose='closeModalDialog'}}
+    <h4 style="text-align: centered;">Submit Speedtest?</h4>
+     <button class="btn btn-primary" {{action "createSpeedTest"}}>Yes</button>
+  {{/modal-dialog}}
+{{/if}}
