@@ -6,7 +6,8 @@ export default DRFSerializer.extend({
    payload.links = {
      tunnels: `tunnels/`,
      speedtests: `speedtests/`,
-     scans: `scans/`
+     scans: `scans/`,
+     systems: `systems/`
    };
    return this._super(...arguments);
  }

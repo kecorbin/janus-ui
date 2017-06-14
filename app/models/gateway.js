@@ -14,5 +14,6 @@ export default DS.Model.extend({
   last_tested: DS.attr('date'),
   tunnels: DS.hasMany('tunnel', { async: true }),
   scans: DS.hasMany('scan', { async: true}),
-  speedtests: DS.hasMany('speedtest', { async: true})
+  speedtests: DS.hasMany('speedtest', { async: true}),
+  systems: DS.hasMany('system', { async: true})
 });

@@ -2,6 +2,11 @@
   <div class="card">
     <div class="header">
       <ul class="nav nav-tabs" data-toggle="tab">
+        <li class="active">{{#link-to "gateways.show.systems" gateway.id}}
+           <span class="pe-7s-network" aria-hidden="true"></span>
+             <div class="hidden-xs">Systems</div>
+         {{/link-to}}
+        </li>
         <li class="active">{{#link-to "gateways.show.tunnels" gateway.id}}
            <span class="pe-7s-share" aria-hidden="true"></span>
              <div class="hidden-xs">Tunnels</div>

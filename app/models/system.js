@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  gateway: DS.belongsTo('gateway'),
   boot_flag: DS.attr('number'),
   ctl_mfg: DS.attr('string'),
   job_name: DS.attr('string'),

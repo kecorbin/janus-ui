@@ -42,6 +42,7 @@ Router.map(function() {
       this.route('scans', function() {
         this.route('detail', {path: '/:scan_id'});
       });
+      this.route('systems');
     });
   });
 

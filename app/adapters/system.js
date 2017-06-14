@@ -1,5 +1,8 @@
 import ApplicationAdapter from './application';
 
 export default ApplicationAdapter.extend({
-  namespace: 'api/v1/inventory/'
+  urlForCreateRecord(modelName, snapshot) {
+    let gateway = snapshot.belongsTo('gateway');
+    return `${this.host}/${this.namespace}/connect/gateways/${gateway}/systems`;
+  }
 });
