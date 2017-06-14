@@ -20,5 +20,9 @@ export default Ember.Route.extend({
 
       tunnel.save().then(() => this.transitionTo('gateways.show.tunnels', gateway));
     },
+    closeModalDialog(){
+      let gateway = this.currentModel
+      this.set('tunnelModal', false).then(this.transitionTo('gateways.show.tunnels', gateway))
+    },
   }
 });

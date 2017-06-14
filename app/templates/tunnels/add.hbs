@@ -1,37 +1,25 @@
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card-wrap">
-        <div class="card">
-          <div class="container">
-            <h1> Create Tunnel </h1>
-            <hr>
-            <div class="col-md-4">
-              <form>
-                <div class="form-group">
-                  <div class="form-group row">
-                    {{input type="text" class="form-control" value=remotehost placeholder="192.168.10.25" }}
-                  </div>
-                  <div class="form-group row">
-                    {{input type="text" class="form-control" value=remoteport placeholder="80" }}
-                      <!-- <select class="form-control" value="{{type}}">
-                        <option value="quick-vendor">quick-vendor</option>
-                        <option value="scan">scan</option>
-                      </select> -->
-
-                  </div>
-                  <div class="form-group row">
-                    {{input type="text" class="form-control" value=timeout placeholder="30" }}
-                  </div>
-                  <!-- <button type="submit" class="btn btn-primary btn-lg">Submit</button> -->
-                   <button class="btn btn-primary" {{action "createTunnel" model.id }}>Create</button>
-                </div>
-              </form>
+{{#if tunnelModal}}
+  {{#modal-dialog translucentOverlay=true containerClass="create-tunnel-modal" clickOutsideToClose=true onClose='closeModalDialog'}}
+    <h4>Enter Tunnel Details</h4>
+      <div class="container-fluid">
+        <form>
+          <div class="form-group">
+            <div class="form-group row">
+              <label for="remotehost">Remote Host</label>
+              {{input type="text" id="remotehost"class="form-control" value=remotehost placeholder="192.168.10.25" }}
             </div>
+            <div class="form-group row">
+              <label for="remoteport">Remote Port</label>
+              {{input type="text" class="form-control" value=remoteport placeholder="80" }}
+            </div>
+            <div class="form-group row">
+              <label for="timeout">Timeout in minutes</label>
+
+              {{input type="text" id="timeout" class="form-control" value=timeout placeholder="30" }}
+            </div>
+             <button class="btn btn-primary" {{action "createTunnel" model.id }}>Create</button>
           </div>
-        </div>
+        </form>
       </div>
-    </div>
-  </div>
-</div>
+  {{/modal-dialog}}
+{{/if}}
